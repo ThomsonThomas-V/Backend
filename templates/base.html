@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Unit Converter – {{ title|default('Home') }}</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; max-width: 800px; margin: auto; padding: 1rem;}
+        header, footer {text-align: center; margin: 1rem 0;}
+        nav a {margin: 0 1rem; text-decoration: none; color: #0066cc;}
+        nav a:hover {text-decoration: underline;}
+        .card {border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-top: 1rem;}
+        label {display: block; margin-top: .5rem;}
+        input[type="number"], select {width: 100%; padding: .4rem; margin-top: .2rem;}
+        button {margin-top: .8rem; padding: .6rem 1.2rem; background:#0066cc; color:#fff; border:none; border-radius:4px; cursor:pointer;}
+        button:hover {background:#004999;}
+        .result {background:#e2f3ff; padding:.8rem; margin-top:.8rem; border-radius:4px; font-weight:bold;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔧 Unit Converter</h1>
+        <nav>
+            <a href="{{ url_for('length') }}">Length</a>
+            <a href="{{ url_for('weight') }}">Weight</a>
+            <a href="{{ url_for('temperature') }}">Temperature</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <small>© {{ now().year }} Simple Unit Converter – pure Flask example.</small>
+    </footer>
+</body>
+</html>
