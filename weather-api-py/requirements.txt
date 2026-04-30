@@ -1,5 +1,0 @@
-Flask==3.0.3
-requests==2.32.3
-redis==5.0.5
-python-dotenv==1.0.1
-Flask-Limiter==3.8.0
